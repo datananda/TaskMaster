@@ -1,0 +1,17 @@
+<h1>Not Devoured</h1>
+<ul>
+    {{#each burgers}} 
+        {{#unless devoured}}
+            <li data-id="{{id}}">{{burger_name}}</li>
+        {{/unless}} 
+    {{/each}}
+</ul>
+
+<h1>Devoured</h1>
+<ul>
+    {{#each burgers}} 
+        {{#if devoured}}
+            <li>{{burger_name}}</li>
+        {{/if}} 
+    {{/each}}
+</ul>
