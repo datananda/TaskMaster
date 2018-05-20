@@ -14,11 +14,10 @@ const orm = {
         });
     },
     updateOne: (table, objColVals, condition, cb) => {
-        const query = connection.query("UPDATE ?? SET ? WHERE ?", [table, objColVals, condition], (err, res) => {
+        connection.query("UPDATE ?? SET ? WHERE ?", [table, objColVals, condition], (err, res) => {
             if (err) throw err;
             cb(res);
         });
-        console.log(query.sql);
     },
 };
 

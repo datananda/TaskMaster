@@ -1,21 +1,21 @@
 const orm = require("../config/orm.js");
 
-const burger = {
+const task = {
     all: (cb) => {
-        orm.selectAll("burgers", (data) => {
+        orm.selectAll("tasks", (data) => {
             cb(data);
         });
     },
     insert: (values, cb) => {
-        orm.insertOne("burgers", ["burger_name", "devoured"], values, (res) => {
+        orm.insertOne("tasks", ["text", "state"], values, (res) => {
             cb(res);
         });
     },
     update: (objColVals, condition, cb) => {
-        orm.updateOne("burgers", objColVals, condition, (res) => {
+        orm.updateOne("tasks", objColVals, condition, (res) => {
             cb(res);
         });
     },
 };
 
-module.exports = burger;
+module.exports = task;
