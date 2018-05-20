@@ -1,11 +1,11 @@
-DROP DATABASE IF EXISTS burgers_db;
-CREATE DATABASE burgers_db;
-USE burgers_db;
+DROP DATABASE IF EXISTS taskmaster;
+CREATE DATABASE taskmaster;
+USE taskmaster;
 
-DROP TABLE IF EXISTS burgers;
-CREATE TABLE burgers (
+DROP TABLE IF EXISTS tasks;
+CREATE TABLE tasks (
     id INTEGER AUTO_INCREMENT,
-    burger_name VARCHAR(30) NOT NULL,
-    devoured BOOLEAN,
+    text VARCHAR(100) NOT NULL,
+    state INTEGER,
     PRIMARY KEY (id)
 );

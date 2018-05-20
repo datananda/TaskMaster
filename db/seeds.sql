@@ -1,3 +1,3 @@
-INSERT INTO burgers (burger_name, devoured) VALUES ("Juicy Lucy", false);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Ultimate", false);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Cowboy", true);
+INSERT INTO tasks (text, state) VALUES ("Fix code", 1);
+INSERT INTO tasks (text, state) VALUES ("Publish to Heroku", 0);
+INSERT INTO tasks (text, state) VALUES ("Start homework", 2);
