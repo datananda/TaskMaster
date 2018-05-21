@@ -26,7 +26,7 @@ function getStateBooleans(inTaskArray) {
 router.get("/", (req, res) => {
     task.all((data) => {
         res.render("index", {
-            tasks: data,
+            tasks: getStateBooleans(data),
         });
     });
 });
